@@ -2,6 +2,11 @@
 #define SYSTEM_H
 
 #define MAX_RECORDS 4
+#define EQ(a,b) (!strcmp((a),(b)))
+#define LT(a,b) (strcmp((a),(b))<0)
+#define LE(a,b) (strcmp((a),(b))<=0)
+#define GT(a,b) (strcmp((a),(b))>0)
+#define GE(a,b) (strcmp((a),(b))>=0)
 
 typedef struct studentRecord
 {
