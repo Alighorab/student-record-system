@@ -124,7 +124,7 @@ void traverse_records(void(*display)(studentRecord_t))
 
 int check_admin_password(char *password)
 {
-    if (strcmp(adminPassword,password) == 0)
+    if (EQ(adminPassword,password))
     {
         return 1;
     }
@@ -153,7 +153,7 @@ int check_user_password(int id, char *password)
 {
     if (records[id].name == NULL || id < 0)
         return -1;
-    else if (strcmp(records[id].password,password) == 0)
+    else if (EQ(records[id].password,password))
         return 1;
     return 0;
 }
